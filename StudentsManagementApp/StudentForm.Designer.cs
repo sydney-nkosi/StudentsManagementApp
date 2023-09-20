@@ -95,6 +95,7 @@
             // 
             // txtName
             // 
+            this.txtName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource, "Name", true));
             this.txtName.Location = new System.Drawing.Point(165, 118);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(211, 20);
@@ -102,6 +103,7 @@
             // 
             // txtPhone
             // 
+            this.txtPhone.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource, "Phone", true));
             this.txtPhone.Location = new System.Drawing.Point(165, 165);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(211, 20);
@@ -109,6 +111,7 @@
             // 
             // txtAge
             // 
+            this.txtAge.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.studentBindingSource, "Age", true));
             this.txtAge.Location = new System.Drawing.Point(165, 206);
             this.txtAge.Name = "txtAge";
             this.txtAge.Size = new System.Drawing.Size(211, 20);

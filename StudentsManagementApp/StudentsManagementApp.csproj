@@ -54,16 +54,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StudentsDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>StudentsDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="StudentsDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>StudentsDataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="StudentsDataSet_.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -90,28 +80,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="StudentsDataSet.xsc">
-      <DependentUpon>StudentsDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="StudentsDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>StudentsDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="StudentsDataSet.xss">
-      <DependentUpon>StudentsDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="StudentsDataSet1.xsc">
-      <DependentUpon>StudentsDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="StudentsDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>StudentsDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="StudentsDataSet1.xss">
-      <DependentUpon>StudentsDataSet1.xsd</DependentUpon>
-    </None>
     <None Include="StudentsDataSet_.xsc">
       <DependentUpon>StudentsDataSet_.xsd</DependentUpon>
     </None>

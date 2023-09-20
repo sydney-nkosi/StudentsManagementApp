@@ -17,16 +17,18 @@ namespace StudentsManagementApp
             InitializeComponent();
         }
 
-        private void StudentForm_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'studentsDataSet.Student' table. You can move, or remove it, as needed.
-            this.studentTableAdapter.Fill(this.studentsDataSet.Student);
-
-        }
+       
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
             studentBindingSource.AddNew();
+        }
+
+        private void StudentForm_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'studentsDataSet_.Student' table. You can move, or remove it, as needed.
+            this.studentTableAdapter.Fill(this.studentsDataSet_.Student);
+
         }
     }
 }

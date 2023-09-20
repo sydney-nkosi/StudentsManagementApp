@@ -44,16 +44,16 @@
             this.btnPrevious = new System.Windows.Forms.Button();
             this.btnNext = new System.Windows.Forms.Button();
             this.btnFirst = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.studentsDataSet = new StudentsManagementApp.StudentsDataSet();
+            this.dgStudents = new System.Windows.Forms.DataGridView();
+            this.studentsDataSet_ = new StudentsManagementApp.StudentsDataSet_();
             this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.studentTableAdapter = new StudentsManagementApp.StudentsDataSetTableAdapters.StudentTableAdapter();
+            this.studentTableAdapter = new StudentsManagementApp.StudentsDataSet_TableAdapters.StudentTableAdapter();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phoneDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
+            this.phoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentsDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgStudents)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentsDataSet_)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -187,32 +187,31 @@
             this.btnFirst.Text = "First";
             this.btnFirst.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dgStudents
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgStudents.AutoGenerateColumns = false;
+            this.dgStudents.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgStudents.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iDDataGridViewTextBoxColumn,
             this.nameDataGridViewTextBoxColumn,
-            this.phoneDataGridViewImageColumn,
+            this.phoneDataGridViewTextBoxColumn,
             this.ageDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.studentBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(399, 118);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(405, 210);
-            this.dataGridView1.TabIndex = 16;
+            this.dgStudents.DataSource = this.studentBindingSource;
+            this.dgStudents.Location = new System.Drawing.Point(382, 118);
+            this.dgStudents.Name = "dgStudents";
+            this.dgStudents.Size = new System.Drawing.Size(431, 210);
+            this.dgStudents.TabIndex = 16;
             // 
-            // studentsDataSet
+            // studentsDataSet_
             // 
-            this.studentsDataSet.DataSetName = "StudentsDataSet";
-            this.studentsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.studentsDataSet_.DataSetName = "StudentsDataSet_";
+            this.studentsDataSet_.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // studentBindingSource
             // 
             this.studentBindingSource.DataMember = "Student";
-            this.studentBindingSource.DataSource = this.studentsDataSet;
+            this.studentBindingSource.DataSource = this.studentsDataSet_;
             // 
             // studentTableAdapter
             // 
@@ -232,11 +231,11 @@
             this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
             // 
-            // phoneDataGridViewImageColumn
+            // phoneDataGridViewTextBoxColumn
             // 
-            this.phoneDataGridViewImageColumn.DataPropertyName = "Phone";
-            this.phoneDataGridViewImageColumn.HeaderText = "Phone";
-            this.phoneDataGridViewImageColumn.Name = "phoneDataGridViewImageColumn";
+            this.phoneDataGridViewTextBoxColumn.DataPropertyName = "Phone";
+            this.phoneDataGridViewTextBoxColumn.HeaderText = "Phone";
+            this.phoneDataGridViewTextBoxColumn.Name = "phoneDataGridViewTextBoxColumn";
             // 
             // ageDataGridViewTextBoxColumn
             // 
@@ -249,7 +248,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(816, 381);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgStudents);
             this.Controls.Add(this.btnLast);
             this.Controls.Add(this.btnPrevious);
             this.Controls.Add(this.btnNext);
@@ -265,12 +264,12 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "StudentForm";
             this.Text = "Students Management";
             this.Load += new System.EventHandler(this.StudentForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentsDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgStudents)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentsDataSet_)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -294,13 +293,13 @@
         private System.Windows.Forms.Button btnPrevious;
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.Button btnFirst;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private StudentsDataSet studentsDataSet;
+        private System.Windows.Forms.DataGridView dgStudents;
+        private StudentsDataSet_ studentsDataSet_;
         private System.Windows.Forms.BindingSource studentBindingSource;
-        private StudentsDataSetTableAdapters.StudentTableAdapter studentTableAdapter;
+        private StudentsDataSet_TableAdapters.StudentTableAdapter studentTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewImageColumn phoneDataGridViewImageColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phoneDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ageDataGridViewTextBoxColumn;
     }
 }

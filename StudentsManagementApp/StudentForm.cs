@@ -30,5 +30,41 @@ namespace StudentsManagementApp
             this.studentTableAdapter.Fill(this.studentsDataSet_.Student);
 
         }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            studentBindingSource.EndEdit();
+            studentTableAdapter.Update(studentsDataSet_.Student);
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            studentBindingSource.RemoveCurrent();
+        }
+
+        private void btnFirst_Click(object sender, EventArgs e)
+        {
+            studentBindingSource.MoveFirst();
+        }
+
+        private void btnLast_Click(object sender, EventArgs e)
+        {
+            studentBindingSource.MoveLast();
+        }
+
+        private void btnPrevious_Click(object sender, EventArgs e)
+        {
+            studentBindingSource.MovePrevious();
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            studentBindingSource.MoveNext();
+        }
     }
 }
